@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envirve Naturals | Handmade Purity</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      // APNI PUBLIC KEY YAHAN DALEN
+      emailjs.init("JLKhvIzsM6hga0E4d"); 
+   })();
+</script>
+</head>
+<body>
+
+    <div id="intro-overlay">
+    <div class="intro-bg-image"></div>
+    
+    <div class="intro-content">
+        <img src="images/logo.png.jpeg" alt="Envirve Naturals" class="intro-logo-anim">
+        <h1 class="intro-text">Welcome to Envirve Naturals</h1>
+        <div class="intro-line"></div> </div>
+</div>
+
+    ...
+</main>
+    <main id="main-content" class="hidden">
+        <div class="site-background-image"></div>
+        <header>
+<nav>
+    <div class="nav-left">
+        <a href="index.html" class="visible-brand">
+            <img src="images/logo.png.jpeg" alt="Envirve Logo" class="visible-logo">
+            <span class="visible-name">Envirve Naturals</span>
+        </a>
+    </div>
+    
+    <div class="nav-right">
+        <div class="search-container">
+            <input type="text" id="product-search" placeholder="Search...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <div class="icon-actions">
+            <a href="https://www.instagram.com/envirvenaturals" target="_blank" class="head-icon">
+                <i class="fas fa-envelope"></i>
+            <a href="javascript:void(0)" class="head-icon" onclick="openCart()">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+</a>
+        </div>
+    </div>
+</nav>
+                <div class="logo">
+    <img src="images/logo.png.jpeg" alt="Envirve Naturals Logo">
+    <span>Envirve Naturals</span> 
+</div>
+                <ul>
+                 <li><a href="#hero" class="nav-button">Home</a></li>
+                <li><a href="#products" class="nav-button">Products</a></li> 
+                <li><a href="https://www.instagram.com/envirvenaturals" target="_blank" class="nav-button"><i class="fab fa-Contact"></i>Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="hero">
+            <h1>Nature's Best, Handcrafted for You.</h1>
+            <h2 class="sub-title-nature">NATURE. &nbsp;CARE. &nbsp;YOU.</h2>
+        </section>
+
+        <section id="products">
+            <h2>Our Collection</h2>
+            <div class="product-grid" id="product-display">
+                </div>
+        </section>
+
+        </section>
+        <section id="social-footer">
+    <div class="container">
+        <h2>Join the Envirve Community</h2>
+        <p>Follow us for organic tips and handmade goodness</p>
+        
+        <a href="https://www.instagram.com/envirvenaturals" target="_blank" class="insta-link">
+            <i class="fab fa-instagram"></i> @envirvenaturals
+        </a>
+    </div>
+</section>
+    </main>
+
+    <script src="script.js"></script>
+    <div id="cart-overlay" onclick="closeCart()"></div>
+
+<div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+        <h2>Your Basket</h2>
+        <button class="close-btn" onclick="closeCart()">&times;</button>
+    </div>
+
+    <div id="cart-items-container">
+        <p class="empty-msg">Your cart is feeling light...</p>
+    </div>
+
+    <div id="checkout-section" style="display: none; padding: 15px; border-top: 2px solid #2d5a27; background: #fefefe;">
+        <h3 style="color: #2d5a27; margin-bottom: 10px; font-size: 1.1rem;">Delivery Details</h3>
+        <form id="order-form" onsubmit="confirmOrder(event)">
+            <input type="text" id="cust-name" placeholder="Full Name" required style="width:100%; padding:8px; margin-bottom:8px; border:1px solid #ddd; border-radius:5px;">
+            <input type="tel" id="cust-phone" placeholder="Phone Number" required style="width:100%; padding:8px; margin-bottom:8px; border:1px solid #ddd; border-radius:5px;">
+            <textarea id="cust-address" placeholder="Complete Address" required style="width:100%; padding:8px; margin-bottom:8px; border:1px solid #ddd; border-radius:5px; height:50px;"></textarea>
+            <input type="text" id="cust-postal" placeholder="Postal Code" required style="width:100%; padding:8px; margin-bottom:10px; border:1px solid #ddd; border-radius:5px;">
+            
+            <button type="submit" style="width:100%; background:#2d5a27; color:white; padding:10px; border:none; border-radius:5px; font-weight:bold; cursor:pointer;">
+                PLACE ORDER NOW
+            </button>
+        </form>
+    </div>
+
+    <div class="cart-footer" id="cart-footer-main">
+        <div class="total-section">
+            <span>Total:</span>
+            <span id="cart-total-amount">Rs 0</span>
+        </div>
+        <button class="checkout-btn" id="main-checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </div>
+</div>
+
+<div id="order-success-msg" style="display:none; position:fixed; top:20px; right:20px; background:#2d5a27; color:white; padding:15px 25px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.3); z-index:10000; font-weight:bold;">
+    ✅ Order Placed Successfully!
+</div>
+</div>
+</body>
+<div id="toast-container"></div>
+</html>
